@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Search, 
@@ -11,17 +11,12 @@ import {
   MessageSquare, 
   Edit, 
   Trash2, 
-  Star, 
   Settings, 
   Bell, 
   Moon, 
   Sun,
   Award,
   TrendingUp,
-  Calendar,
-  BarChart2,
-  HelpCircle,
-  LogOut
 } from 'lucide-react';
 import { 
   LineChart, 
@@ -553,7 +548,7 @@ const GoalTracker = () => {
                           
                           <div className="flex items-center justify-between">
                             <div className="flex -space-x-2">
-                              {goal.collaborators.slice(0, 3).map((collaborator, index) => (
+                              {goal.collaborators.slice(0, 3).map((collaborator) => (
                                 <div key={collaborator.id} className="w-6 h-6 rounded-full overflow-hidden border-2 border-white dark:border-gray-800">
                                   <img src={collaborator.avatar} alt={collaborator.name} className="w-full h-full object-cover" />
                                 </div>
